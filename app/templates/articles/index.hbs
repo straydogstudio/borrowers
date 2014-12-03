@@ -1,0 +1,28 @@
+<h2>Articles Index</h2>
+
+<table class="primary">
+	<thead>
+		<tr>
+			<th>Description</th>
+			<th>Notes</th>
+			<th>Borrowed Since</th>
+			<th>State</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each itemController='articles/item'}}
+		    <tr>
+		    	<td>{{model.description}}</td>
+		    	<td>{{model.notes}}</td>
+		    	<td>{{formatted-date model.createdAt 'LL'}}</td>
+		    	<td>{{view Ember.Select content=states selection=model.state}}</td>
+		    	<td>
+		    		{{#if model.isSaving}}
+		    		  <p>Saving...</p>
+	    			{{/if}}
+		    	</td>
+		    </tr>
+		{{/each}}
+	</tbody>
+</table>

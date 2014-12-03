@@ -1,0 +1,14 @@
+<nav>
+	{{link-to 'Borrowers' 'index' class='main'}}
+
+	<!-- responsive -->
+	<input id='bmenu' class='burgercheck' type='checkbox'>
+	<label for='bmenu' class='burgermenu'></label>
+	<!-- /responsive -->
+
+	<div class="menu">
+		{{#link-to 'index' class='icon-guage'}}Dashboard{{/link-to}}
+		{{#link-to 'friends' class='icon-users-1'}}Friends{{/link-to}}
+		{{#link-to 'friends.new' class='icon-user-add'}}New Friend{{/link-to}}
+	</div>
+</nav>

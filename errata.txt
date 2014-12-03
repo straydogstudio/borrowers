@@ -1,0 +1,6 @@
+For the version released 11/28
+page 36: In app/templates/friends/edit.hbs, I had to use {{model.fullName}} to get output.
+page 42: You have '#friend in model', should be '#each friend in model'
+page 73: Do you really mean 'set a and b consecutively' vs 'continuously' since you are only calling each once?
+page 96: I think you mean friends disappear if "the total number of articles is odd", not even. 
+

@@ -1,0 +1,21 @@
+<h1>{{model.length}} Friends</h1>
+
+<table class="primary">
+	<thead>
+		<tr>
+			<th {{action "setSortBy" "fullName"}}>Name</th>
+			<th {{action "setSortBy" "totalArticles"}}>Articles</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each friend in model}}
+			<tr>
+				<td>{{link-to friend.fullName 'articles' friend}}</td>
+				<td>{{friend.totalArticles}}</td>
+				<td><a href="#" {{action "delete" friend}}>Delete</a></td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>
+
