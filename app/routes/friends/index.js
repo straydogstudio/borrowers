@@ -9,8 +9,8 @@ export default Ember.Route.extend({
 			refreshModel: true
 		}
 	},
-	model: function() {
-		return this.store.find('friend');
+	model: function(params) {
+		return this.store.find('friend', params);
 	},
 	actions: {
 	}

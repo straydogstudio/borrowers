@@ -7,8 +7,8 @@
 	<!-- /responsive -->
 
 	<div class="menu">
-		{{#link-to 'index' class='icon-guage'}}Dashboard{{/link-to}}
-		{{#link-to 'friends' class='icon-users-1'}}Friends{{/link-to}}
+		{{#link-to 'index' class='icon-gauge'}}Dashboard{{/link-to}}
+		{{#link-to 'friends' (query-params sortBy="totalArticles") class='icon-users-1' }}Friends{{/link-to}}
 		{{#link-to 'friends.new' class='icon-user-add'}}New Friend{{/link-to}}
 	</div>
 </nav>
